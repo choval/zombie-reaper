@@ -1,5 +1,12 @@
 #!/bin/env php
 <?php
+$ret = @ini_set('zend.assertions', '1');
+if ($ret === false) {
+    echo "ini_set failed\n";
+    exit(1);
+}
+ini_set('assert.exception', '1');
+
 require(__DIR__.'/../src/fns.php');
 
 echo "This PID: ".getmypid()."\n";
@@ -10,6 +17,7 @@ if ($pid == -1) {
     die('could not fork');
 } elseif ($pid) {
     // parent
+    sleep(1);
     $zombies = zombie_find();
     $zombies_count = count($zombies);
     assert($zombies_count === 1);
