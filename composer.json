@@ -1,0 +1,11 @@
+{
+    "name": "choval/zombie-reaper",
+    "description": "Kills & reaps zombie processes in PHP",
+    "type": "library",
+    "license": "See LICENSE",
+    "autoload": {
+        "files": [
+            "src/fns.php"
+        ]
+    }
+}
