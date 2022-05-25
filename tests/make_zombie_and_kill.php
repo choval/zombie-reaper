@@ -1,12 +1,5 @@
 #!/bin/env php
 <?php
-$ret = @ini_set('zend.assertions', '1');
-if ($ret === false) {
-    echo "ini_set failed\n";
-    exit(1);
-}
-ini_set('assert.exception', '1');
-
 require(__DIR__.'/../src/fns.php');
 
 echo "This PID: ".getmypid()."\n";
