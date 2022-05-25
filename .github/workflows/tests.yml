@@ -31,9 +31,7 @@ jobs:
               if: github.event.inputs.git-ref != ''
               with:
                 ref: ${{ github.event.inputs.git-ref }}
-            - name: Install composer
-              uses: php-actions/composer@v5
             - name: make zombie and kill
               run: |
-                php tests/make_zombie_and_kill.php
+                php -d zend.assertions=1 -d assert.exception=1 tests/make_zombie_and_kill.php
 
