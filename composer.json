@@ -2,7 +2,7 @@
     "name": "choval/zombie-reaper",
     "description": "Kills & reaps zombie processes in PHP",
     "type": "library",
-    "license": "See LICENSE",
+    "license": "MIT",
     "autoload": {
         "files": [
             "src/fns.php"
